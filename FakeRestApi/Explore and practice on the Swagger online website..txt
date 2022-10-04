@@ -1,0 +1,73 @@
+Explore and practice on the Swagger online website.
+
+Request: Get all authors
+
+Api: GET /api/v1/Authors 
+
+Test case 1: Check if all authors appeared with response code 200 "ok".
+Expected Result: all authors appeared with response code 200 "ok".
+Actual Result: 200 "ok".
+Status: Pass.
+
+Test case 2: Check if objects inside response body.
+Expected Result: response body should contain {"id","idBook","firstName","lastName"}.
+Actual Result: {"id","idBook","firstName","lastName"}.
+Status: Pass
+
+Test case 3; Check if response header "Content-type" contains Json data
+Expected Result: response header "Content-type" value should be "application/json; charset=utf-8; v=1.0".
+Actual Result: "application/json; charset=utf-8; v=1.0".
+Status: Pass
+
+-------------------------------
+Request:Post ( Create new Author) 
+Api: POST /api/v1/Authors 
+
+test case 1: Check if register new author is registered successfully with response 201 created
+Expected Result: response code should be 201 "Created"
+Actual Result: response code is 200 "ok"
+Status: Fail
+
+Test case 2: Check if firstname & lastname is mandatory at response body
+Expected Result: An Error message "Bad Request" and Response code 400
+Actual Result: Requested body is accepted and created and Response code is 200 
+Status: Fail
+-------------------------------
+Request: Get specific author With id book
+Api: GET /api/v1/Authors/authors/books/{idBook}
+
+Test Case 1: Searching with valid idBook should return relative data in response body.
+Expected Result: return relative data in response body with response Code 200 "Ok"
+Actual Result: returned relative data in response body with response Code 200 "Ok"
+Status: Pass.
+
+--------------------------------
+Request: PUT (update a specific author)
+Api: PUT /api/v1/Authors/{id}
+
+Test Case 1: check if Author's data is updated successfully.
+Expected Result: Update (firstname, lastname) and confirm that Author's data in response is updated successfully.
+Actual Result: Author's (firstname, lastname) updated successgully
+Status: Pass.
+
+--------------------------------
+Request: Get specific author With id
+Api: GET /api/v1/Authors/{id}
+
+Test Case 1: Searching with valid id should return relative data in response body.
+Expected Result: return relative data in response body with response Code 200 "Ok".
+Actual Result: returned relative data in response body with response Code 200 "Ok".
+Status: Pass.
+
+--------------------------------
+Request: Delete specific author.
+Api: DELETE ​/api​/v1​/Authors​/{id}.
+
+Test Case 1: Delete author with id=1
+Expected Result: Author should be deleted successfully .
+Actual Result: Author deleted successfully.
+Status: Pass.
+
+
+
+
